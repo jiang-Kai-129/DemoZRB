@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoJK</title>
+    <link rel="stylesheet" href="css/buttons.css"> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css"> 
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/bin.css">
+
+    
+
+</head>
+<body>
+    <!-- 主页面 -->
+    <div id="main">
+        <div id="main-head">
+            <div id="name">企业异构数据及应用平台</div>
+        </div>
+        <div id="main-body">
+            <div id="main-left">
+                <div id="left-up">
+                    <div id="left-up-btn">
+                        <button id="add-btn" class="button button--pipaluk button--text-thick" data-toggle="modal" data-target="#myModal">Add</button>
+                    </div>
+                </div>
+                <div id="left-down">
+                    <div id="data-div">
+                        <div id="data-all">
+                            <!-- <img src="img/bady-back-4.jpg" style="height:37px; width:290px; margin-left:1.5px; margin-top:-27px;" /> -->
+                            <div class="data-str" draggable="true">1</div>
+                            <div class="data-str" draggable="true">2</div>
+                            <div class="data-str" draggable="true">3</div>
+                            <div class="data-str" draggable="true">2</div>
+                            <div class="data-str" draggable="true">2</div>
+                            <div class="data-str" draggable="true">2</div>
+                            <div class="data-str" draggable="true">2</div>
+                            <div class="data-str" draggable="true">2</div>
+                        </div>
+                        <div class="bin">
+                            <div class="front"></div>
+                            <div class="back"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main-right">
+                <div id="charts">
+                    charts
+                </div>
+                <div id="func-choose">
+                    <div id="bar" class="func-charts">bar</div>
+                    <div id="pie" class="func-charts">pie</div>
+                    <div id="line" class="func-charts">line</div>
+                    <div id="form" class="func-charts">form</div>
+                    <div id="other" class="func-charts">other</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">添加数据</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="in-1" class="db-choose" tabindex="1">
+                        <input class="selectopt" name="test" type="radio" id="opt1" checked>
+                            <label for="opt1" class="option">Database1</label>
+                        <input class="selectopt" name="test" type="radio" id="opt2">
+                            <label for="opt2" class="option">Database2</label>
+                        <input class="selectopt" name="test" type="radio" id="opt3">
+                            <label for="opt3" class="option">Database3</label>
+                        <input class="selectopt" name="test" type="radio" id="opt4">
+                            <label for="opt4" class="option">Database4</label>
+                        <input class="selectopt" name="test" type="radio" id="opt5">
+                            <label for="opt5" class="option">Database5</label>
+                    </div>
+                    <div id="in-2" class="in-box"><input class="int" type="text" autocomplete="off" placeholder="IP输入"></div>
+                    <div id="in-3" class="in-box"><input class="int" type="text" autocomplete="off" placeholder="端口输入"></div>
+                    <div id="in-4" class="in-box"><input class="int" type="text" autocomplete="off" placeholder="用户名输入"></div>
+                    <div id="in-5" class="in-box"><input class="int" type="text" autocomplete="off" placeholder="密码输入"></div>
+                    <div id="in-6" class="in-box"><input class="int" type="text" autocomplete="off" placeholder="数据库"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">提交</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+</body>
+<script src="js/bin.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/bar.js"></script>
+    
+</html>

@@ -1,0 +1,131 @@
+.folder {
+    /* This will enable the 3D effect. Decrease this value 
+     * to make the perspective more pronounced: */
+      
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    perspective: 800px; /*镜头距离800PX*/
+      
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+      
+    width: 160px;
+    height: 120px;
+    margin: -100px 0 0 -60px;
+  }
+    
+  .folder div{
+    width:150px;
+    height:115px;
+      
+    background-color:#93bad8;
+      
+    /* 3D变化保留元素的位置 */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+      
+    /*平滑的动画过渡 */
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    transition:0.5s; 
+      
+    /*禁止用户选中元素*/
+    -webkit-user-select: none;
+     -moz-user-select: none;
+     user-select: none; 
+      
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-75px;
+  }
+    
+    
+  .folder .front{
+      
+    /*圆角，X轴3D转换30度 */
+    border-radius:5px 5px 0 0;
+    -moz-transform:rotateX(-30deg);
+    -webkit-transform:rotateX(-30deg);
+    transform:rotateX(-30deg);
+      
+     /*定义在X轴与Y轴的位置 */
+    -moz-transform-origin:50% 100%;
+    -webkit-transform-origin:50% 100%;
+    transform-origin:50% 100%;
+      
+     /*定义渐变效果 */
+    background-image: -moz-linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+    background-image: -webkit-linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+    background-image: linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+      
+     /*定义阴影 */
+    box-shadow:0 -2px 2px rgba(0,0,0,0.1), 0 1px rgba(255,255,255,0.35) inset;
+      
+    z-index:10;
+      
+    font: bold 26px sans-serif;
+    color: #5A88A9;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+    line-height: 115px;
+  }
+    
+  .folder .back{
+     /*定义渐变效果 */
+    background-image: -webkit-linear-gradient(top, #93bad8 0%, #89afcc 10%, #5985a5 60%);
+    background-image: -moz-linear-gradient(top, #93bad8 0%, #89afcc 10%, #5985a5 60%);
+    background-image: linear-gradient(top, #93bad8 0%, #89afcc 10%, #5985a5 60%);
+      
+    /*定义圆角*/
+    border-radius:0 5px 0 0;
+    /*定义阴影 */
+    box-shadow:0 -1px 1px rgba(0,0,0,0.15);
+  }
+    
+   /*在.back前加上内容 */
+  .folder .back:before{
+    content:'';
+    width:60px;
+    height:10px;
+    border-radius:4px 4px 0 0;
+    background-color:#93bad8;
+    position:absolute;
+    top:-10px;
+    left:0px;
+    box-shadow:0 -1px 1px rgba(0,0,0,0.15);
+  }
+    
+   /*在.back后加上内容 */
+  .folder .back:after{
+    content:'';
+    width:100%;
+    height:4px;
+    border-radius:5px;
+    position:absolute;
+    bottom:5px;
+    left:0px;
+    box-shadow:0 4px 8px #333;
+  }
+    
+  .folder.open .front{
+   /*3D转换50度 */
+    -moz-transform:rotateX(-50deg);
+    -webkit-transform:rotateX(-50deg);
+    transform:rotateX(-50deg);
+  }
+    
+    
+  /*----------------------------
+    Draggable Icons
+  -----------------------------*/
+    
+  #main img{
+    position:absolute;
+    cursor:move;
+    height:40px;
+    width:40px;
+  }

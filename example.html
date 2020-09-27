@@ -1,0 +1,122 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/example.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2101612_omeybf7bm6k.css">
+</head>
+<body>
+    <div id="main">
+        <div class="folder">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+            <img src="img\1.jpg" style="top:340px;left:100px;" alt="box" /> 
+            <img src="img\1.jpg" style="top:340px;left:170px;" alt="calculator" /> 
+            <img src="img\1.jpg" style="top:340px;left:240px;" alt="clipboard" /> 
+            <img src="img\1.jpg" style="top:340px;left:310px;" alt="console" /> 
+            <img src="img\1.jpg" style="top:340px;left:380px;" alt="basketball" /> 
+            <img src="img\1.jpg" style="top:400px;left:100px;" alt="facebook" /> 
+            <img src="img\1.jpg" style="top:400px;left:170px;" alt="gift" /> 
+            <img src="img\1.jpg" style="top:400px;left:240px;" alt="id card" /> 
+            <img src="img\1.jpg" style="top:400px;left:310px;" alt="imac" /> 
+            <img src="img\1.jpg" style="top:400px;left:380px;" alt="system monitoring" /> 
+    </div>
+</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/base.js"></script>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loadXMLDoc()
+        {
+            // .... AJAX 脚本执行 ...
+        }
+        </script>
+</head>
+<body>
+    
+    <div id="myDiv"><h2>使用 AJAX 修改该文本内容</h2></div>
+    <button type="button" onclick="loadXMLDoc()">修改内容</button>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title>五分钟上手之折线图</title>
+          <!-- 引入 echarts.js -->
+          <script src="js/echarts.min.js"></script>
+          <script src="js/jquery.min.js"></script>
+     </head>
+     <body>
+          <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+          <div id="main" style="width: 600px;height:400px;"></div>
+          <script type="text/javascript">
+     
+              // 基于准备好的dom，初始化echarts实例
+              var myChart = echarts.init(document.getElementById('main'));
+              // 指定图表的配置项和数据
+              myChart.setOption({
+                       title: {
+                            text: '近七日收益'
+                        },
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        legend: {
+                            data:['近七日收益']
+                        },
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        toolbox: {
+                            feature: {
+                                saveAsImage: {}
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: ["1","2","3","4","5"]
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [
+                        
+                            {
+                                name:'近七日收益',
+                                type:'line',
+                                stack: '总量',
+                                data:["1","2","3","4","5"]
+                            }
+                        ]
+              });
+              // 异步加载数据
+            /*  $.get('data.json').done(function (data) {
+                   // 填入数据
+                   myChart.setOption({ xAxis: { data: data.categories }, series: [{
+                        // 根据名字对应到相应的系列
+                        name: '销量',
+                        data: data.data
+                   }]
+                   });});*/
+          </script>
+     </body>
+</html>
+ 
